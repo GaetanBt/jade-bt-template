@@ -1,0 +1,29 @@
+extends template.jade
+
+block seo
+
+	//- Variables
+	- var title = 'Come on dude !'
+	- var type  = ''
+	- var desc  = 'Do not forget to create your description !'
+	- var image = ''
+	- var url   = 'http://'
+	
+	
+	// Open graph properties 
+	meta(property="title" content="#{title}")
+	meta(property="type"  content="#{type}")
+	meta(property="desc"  content="#{desc}")
+	meta(property="image" content="#{image}")
+	meta(property="url"   content="#{url}")
+
+	// Individual SEO configuration 
+	title #{title}
+	meta(name='robots', content='noindex, nofollow')
+	meta(name='description', content='#{desc}')
+
+
+block content
+	//- There goes the content of each page		
+	section.container#main-content(role="main")
+		h1 Simple Jade based template for website
