@@ -12,18 +12,18 @@ var gulp = require('gulp'),
 // --------------------
 var paths = {
     
-    base :           '.',
+	base:           '.',
     
-		html_files :     './*.html',
+	html_files:     './*.html',
 	
-    layout : {
-        files:       './layout/*.jade',
-				dontCompile: '!./layout/template.jade',
-        watch:       './layout/**/*',
-        dest:        '.'
-    },
+	layout : {
+		files:        './layout/*.jade',
+		dontCompile:  '!./layout/template.jade',
+		watch:        './layout/**/*',
+		dest:         '.'
+	},
 		
-		livereloadPort : 10
+	livereloadPort: 10
 
 };
 
@@ -34,10 +34,10 @@ var paths = {
 gulp.task('jade', function(){
     return gulp.src([paths.layout.files, paths.layout.dontCompile])
 				
-				// Prevent streams to be unpiped by errors
+		// Prevent streams to be unpiped by errors
         .pipe(plumber())
 		
-				// Compile readable html files
+		// Compile readable html files
         .pipe(jade({pretty: true}))
         .pipe(gulp.dest(paths.base))
 });
