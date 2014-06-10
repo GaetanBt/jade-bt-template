@@ -10,17 +10,17 @@ block seo
 	- var url   = 'http://'
 	
 	
-	// Open graph properties 
+	// Individual SEO configuration 
+	title #{title}
+	meta(name='robots' content='noindex, nofollow')
+	meta(name='description' content='#{desc}')
+
+	// Opengraph properties 
 	meta(property="title" content="#{title}")
 	meta(property="type"  content="#{type}")
 	meta(property="desc"  content="#{desc}")
 	meta(property="image" content="#{image}")
 	meta(property="url"   content="#{url}")
-
-	// Individual SEO configuration 
-	title #{title}
-	meta(name='robots' content='noindex, nofollow')
-	meta(name='description' content='#{desc}')
 
 
 block content

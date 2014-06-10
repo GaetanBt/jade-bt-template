@@ -3,18 +3,35 @@ html(lang="fr-FR", class="no-js", prefix="og: http://ogp.me/ns#")
 
 	head
 	
-		// Styles 
-		link(rel='stylesheet' href='css/style.css')
-	
-		// Metas 
+		// Metas
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
 		meta(charset='utf-8')
 		meta(name='viewport' content='initial-scale=1.0')
-	
+
+		// SEO configuration & Opengraph
+		block seo
+
+		// Styles 
+		link(rel='stylesheet' href='css/style.css')
+		
 		// Other links 
 		link(rel='shortcut icon' type='image/x-icon' href='img/icons/favicon.jpg')
 		
-		// Opengraph & SEO configuration 
-		block seo
+		//- Apple dashboard icons
+		- var apple_icon_url = './img/icons/touch-icons/'
+
+		//- Non-retina iPhone and iPod touch 
+		link(rel="apple-touch-icon" sizes="57x57" href="#{apple_icon_url}touch-icon-57x57.png")
+		//- iPhone ≥ 4 and iPod touch (high resolution) on iOS ≤ 6 
+		link(rel="apple-touch-icon" sizes="114x114" href="#{apple_icon_url}touch-icon-114x114.png")
+		//- iPhone ≥ 4 and iPod touch (high resolution) on iOS ≥ 7 
+		link(rel="apple-touch-icon" sizes="120x120" href="#{apple_icon_url}touch-icon-120x120.png")
+		//- iPad 1,2 and iPad mini (standard resolution) on iOS ≤ 6 
+		link(rel="apple-touch-icon" sizes="72x72" href="#{apple_icon_url}touch-icon-72x72.png")
+		//- iPad 1,2 and iPad mini (standard resolution) on iOS ≥ 7   
+		link(rel="apple-touch-icon" sizes="76x76" href="#{apple_icon_url}touch-icon-76x76.png") 
+		//- iPad and iPad mini (high resolution) 
+		link(rel="apple-touch-icon" sizes="152x152" href="#{apple_icon_url}touch-icon-152x152.png")
 		
 		
 	body
